@@ -4,6 +4,7 @@ import teams.Teams;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main (String [] args){
@@ -35,7 +36,19 @@ public class Main {
         teams.add(fc7);
         teams.add(fc8);
 
+        Collections.shuffle(teams);
 
+        ArrayList<Teams> round1Winners = new ArrayList<>();
+        round1Winners = RoundsController.getWinningTeam(teams);
+
+        ArrayList<Teams> round2Winners = new ArrayList<>();
+        round2Winners = RoundsController.getWinningTeam(round1Winners);
+
+
+        ArrayList<Teams> finalWinner = new ArrayList<>();
+        finalWinner = RoundsController.getWinningTeam(round2Winners);
+
+        System.out.println("Champion is:" + finalWinner.get(0).getClubName());
 
     }
 }
