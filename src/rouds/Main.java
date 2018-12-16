@@ -44,7 +44,6 @@ public class Main {
         ArrayList<Teams> round2Winners = new ArrayList<>();
         round2Winners = RoundsController.getWinningTeam(round1Winners);
 
-
         ArrayList<Teams> finalWinner = new ArrayList<>();
         finalWinner = RoundsController.getWinningTeam(round2Winners);
 

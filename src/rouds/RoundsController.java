@@ -24,7 +24,7 @@ public class RoundsController {
             Teams winner = getWinner(firstGroup.get(i), secondGroup.get(i));
 
             winners.add(winner);
-            System.out.println("Teh winner is " + " " +winner.getClubName());
+            System.out.println("The winner is " + " " +winner.getClubName());
         }
         System.out.println("******************");
         return winners;
